@@ -1,0 +1,14 @@
+package mission2;
+
+public class Tester2 {
+
+	public static void main(String[] args) {
+		ArithmeticProgression fd = new ArithmeticProgression(1,2);
+		fd.printGeneralSeries();
+		System.out.println(fd.memberCalculation(3));
+		System.out.println(fd.calculateN(7));
+		ArithmeticProgression fd2 = new ArithmeticProgression(1, 1);
+		System.out.println(fd.equal(fd2));
+		System.out.println(fd.smallDiff(fd2));
+	}
+}
