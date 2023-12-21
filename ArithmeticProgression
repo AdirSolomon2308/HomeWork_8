@@ -1,0 +1,69 @@
+package mission2;
+
+public class ArithmeticProgression 
+{
+	private int fM;
+	private int diff;
+	public ArithmeticProgression(int fM,int diff)
+	{
+		this.fM=fM;
+		this.diff=diff;
+	}
+	public void printGeneralSeries()
+	{
+		System.out.println("an = "+this.fM+" + "+this.diff+"*(n-1)");
+	}
+	public int memberCalculation(int n)
+	{
+		int an = this.fM+this.diff*(n-1);
+		return an;
+	}
+	public float calculateN(int an)
+	{
+		float n = ((an - this.fM) / this.diff) + 1;
+		if(n == (int)n)
+		{
+			return n;
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	public int getFM()
+	{
+		return this.fM;
+	}
+	public int getDiff()
+	{
+		return this.diff;
+	}
+	public void setFM(int fM)
+	{
+		this.fM = fM;
+	}
+	public void setDiff(int diff)
+	{
+		this.diff = diff;
+	}
+	public ArithmeticProgression(ArithmeticProgression other)
+	{
+		this.fM = other.fM;
+		this.diff = other.diff;
+	}
+	public boolean equal(ArithmeticProgression other)
+	{
+		return this.diff == other.diff && this.fM == other.fM;
+	}
+	public boolean smallDiff(ArithmeticProgression other)
+	{
+		if(this.diff <= other.diff)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+}
